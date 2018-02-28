@@ -6,13 +6,110 @@
     android:layout_height="match_parent"
     tools:context="com.rsalas.lab01.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <ImageView
+        android:id="@+id/ImagenHeader"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        android:layout_marginBottom="346dp"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:scaleType="fitXY"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/headimg" />
+
+    <ImageView
+        android:id="@+id/FiltroHeader"
+        android:layout_width="0dp"
+        android:layout_height="190dp"
+        android:alpha="0.3"
+        app:layout_constraintBottom_toBottomOf="@+id/ImagenHeader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ImagenHeader"
+        app:layout_constraintTop_toTopOf="@+id/ImagenHeader"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@android:color/background_dark" />
+
+    <ImageView
+        android:id="@+id/FiltroTitulo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0.51"
+        android:src="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/Subtitulo"
+        app:layout_constraintEnd_toEndOf="@+id/Titulo"
+        app:layout_constraintStart_toStartOf="@+id/Titulo"
+        app:layout_constraintTop_toTopOf="@+id/Titulo"
+        app:layout_constraintVertical_bias="0.75" />
+    <TextView
+        android:id="@+id/Titulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="casual"
+        android:text="Cult Movies"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/FiltroHeader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/FiltroHeader"
+        app:layout_constraintVertical_bias="0.33" />
+
+    <ImageView
+        android:id="@+id/FiltroSubtitulo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0.51"
+        android:src="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/Subtitulo"
+        app:layout_constraintEnd_toEndOf="@+id/Subtitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Subtitulo" />
+    <TextView
+        android:id="@+id/Subtitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:textColor="@android:color/white"
+        android:fontFamily="monospace"
+        android:textAlignment="center"
+        android:text="'A list of Greatest Cult Movies classified according to their popularity'"
+        app:layout_constraintBottom_toBottomOf="@+id/FiltroHeader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Titulo"
+        app:layout_constraintVertical_bias="0.173" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FiltroHeader">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            />
+    </ScrollView>
+
 
 </android.support.constraint.ConstraintLayout>
