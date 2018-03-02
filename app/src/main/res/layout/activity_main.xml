@@ -6,110 +6,84 @@
     android:layout_height="match_parent"
     tools:context="com.rsalas.lab01.MainActivity">
 
+
     <ImageView
-        android:id="@+id/ImagenHeader"
-        android:layout_width="0dp"
-        android:layout_height="160dp"
-        android:layout_marginBottom="346dp"
-        android:adjustViewBounds="false"
-        android:cropToPadding="false"
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="202dp"
+        android:contentDescription="@string/app_name"
         android:scaleType="fitXY"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/headimg"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/headimg" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/FiltroHeader"
-        android:layout_width="0dp"
-        android:layout_height="190dp"
-        android:alpha="0.3"
-        app:layout_constraintBottom_toBottomOf="@+id/ImagenHeader"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/ImagenHeader"
-        app:layout_constraintTop_toTopOf="@+id/ImagenHeader"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@android:color/background_dark" />
-
-    <ImageView
-        android:id="@+id/FiltroTitulo"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:alpha="0.51"
-        android:src="@android:color/black"
-        app:layout_constraintBottom_toTopOf="@+id/Subtitulo"
-        app:layout_constraintEnd_toEndOf="@+id/Titulo"
-        app:layout_constraintStart_toStartOf="@+id/Titulo"
-        app:layout_constraintTop_toTopOf="@+id/Titulo"
-        app:layout_constraintVertical_bias="0.75" />
     <TextView
-        android:id="@+id/Titulo"
+        android:id="@+id/a"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="casual"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="48dp"
         android:text="Cult Movies"
         android:textAlignment="center"
         android:textColor="@android:color/white"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="@+id/FiltroHeader"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/FiltroHeader"
-        app:layout_constraintVertical_bias="0.33" />
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
-    <ImageView
-        android:id="@+id/FiltroSubtitulo"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:alpha="0.51"
-        android:src="@android:color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/Subtitulo"
-        app:layout_constraintEnd_toEndOf="@+id/Subtitulo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/Subtitulo" />
     <TextView
-        android:id="@+id/Subtitulo"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_width="356dp"
+        android:layout_height="51dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:textColor="@android:color/white"
-        android:fontFamily="monospace"
+        android:layout_marginTop="8dp"
+        android:text="ranking according to their popularity as cult films."
         android:textAlignment="center"
-        android:text="'A list of Greatest Cult Movies classified according to their popularity'"
-        app:layout_constraintBottom_toBottomOf="@+id/FiltroHeader"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Titulo"
-        app:layout_constraintVertical_bias="0.173" />
+        app:layout_constraintTop_toBottomOf="@+id/a" />
 
-    <ScrollView
+    <ImageSwitcher
+        android:id="@+id/imageSwitcher"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FiltroHeader">
+        app:layout_constraintTop_toBottomOf="@+id/b_next" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
+    <Button
+        android:id="@+id/b_prev"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Prev"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-            />
-    </ScrollView>
+    <Button
+        android:id="@+id/b_next"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
 
 </android.support.constraint.ConstraintLayout>
